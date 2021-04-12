@@ -45,9 +45,18 @@
     
     </section> -->
 
-    <section>
+    <!-- <section>
         @foreach($membre as $item)
             @if($item->genre == 'Femme' && $item->age >= 18 && $item->age <= 24 )
+                <p>Prenom: {{$item->nom}} Age:{{$item->age}}</p>
+            @endif
+        @endforeach
+    
+    </section> -->
+
+    <section>
+        @foreach($membre as $item)
+            @if($item->age < 18 || $item->age > 24 )
                 <p>Prenom: {{$item->nom}} Age:{{$item->age}}</p>
             @endif
         @endforeach
